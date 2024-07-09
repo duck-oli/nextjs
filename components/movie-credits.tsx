@@ -1,4 +1,4 @@
-import { API_URL } from "../app/(home)/page";
+const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 export async function getMovie(id: string) {
   const json = await (await fetch(`${API_URL}/${id}/credits`)).json();
