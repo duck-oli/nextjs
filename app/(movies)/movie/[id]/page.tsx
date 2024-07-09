@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import MovieInfo, { getMovie } from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
-import MovieProvider from "../../../../components/movie-provider";
 import MovieCredits from "../../../../components/movie-credits";
 
 interface IParams {
@@ -34,9 +33,6 @@ export default async function MovieDetail({ params: { id } }: IParams) {
       </Suspense>
       <Suspense>
         <MovieCredits id={id} />
-      </Suspense>
-      <Suspense>
-        <MovieProvider id={id} />
       </Suspense>
     </div>
   );
