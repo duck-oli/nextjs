@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import styles from "../styles/movie.module.css";
@@ -13,7 +13,7 @@ interface IMovieProps {
 export default function Movie({ title, id, poster_path }: IMovieProps) {
   const router = useRouter();
   const onClick = () => {
-    router.push(`/movie/${id}`)
+    router.push(`/movie/${id}`);
   };
   return (
     <div className={styles.movie}>
